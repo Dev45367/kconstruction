@@ -66,6 +66,12 @@ export default function InventoryPage() {
     currentPage * ITEMS_PER_PAGE
   );
 
+  const handleBarClick = (data: any) => {
+    if (data && data.material) {
+      setSelectedMaterial(data.material);
+    }
+  };
+
   return (
     <div className="flex flex-col gap-8">
       {/* Bar Chart */}
@@ -76,7 +82,7 @@ export default function InventoryPage() {
             <XAxis dataKey="material" />
             <YAxis />
             <Tooltip />
-            <Bar dataKey="quantity" fill="#8884d8" onClick={data => setSelectedMaterial(data.payload.material)}>
+            <Bar dataKey="quantity" fill="#8884d8" onClick={handleBarClick}>
               {aggregatedData.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
@@ -198,6 +204,7 @@ export default function InventoryPage() {
           </tbody>
         </table>
       </div>
+      
       {/* Pagination */}
       <div className="flex justify-between items-center mt-4">
         <button
