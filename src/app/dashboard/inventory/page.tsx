@@ -76,7 +76,7 @@ export default function InventoryPage() {
             <XAxis dataKey="material" />
             <YAxis />
             <Tooltip />
-            <Bar dataKey="quantity" fill="#8884d8" onClick={data => setSelectedMaterial(data.material)}>
+            <Bar dataKey="quantity" fill="#8884d8" onClick={data => setSelectedMaterial(data.payload.material)}>
               {aggregatedData.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
