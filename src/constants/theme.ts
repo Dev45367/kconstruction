@@ -1,0 +1,9 @@
+export const PRIMARY_COLOR = "bg-blue-600";
+export const PRIMARY_COLOR_TEXT = "text-blue-600";
+export const PRIMARY_COLOR_HOVER = "hover:bg-blue-700";
+export const TEXT_COLOR = "text-gray-700";
+export const INPUT_TEXT_COLOR = "text-black";
+export const CARD_BG = "bg-white";
+export const CARD_SHADOW = "shadow-lg";
+export const CARD_RADIUS = "rounded-xl";
+export const PAGE_BG = "bg-white"; 
